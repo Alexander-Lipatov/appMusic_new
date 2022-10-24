@@ -1,3 +1,4 @@
+import { Album } from './../types';
 /**
  * Learn more about deep linking with React Navigation
  * https://reactnavigation.org/docs/deep-linking
@@ -15,16 +16,27 @@ const linking: LinkingOptions<RootStackParamList> = {
     screens: {
       Root: {
         screens: {
-          TabOne: {
+          Home: {
             screens: {
-              TabOneScreen: 'one',
+              HomeScreen: 'home',
             },
           },
-          TabTwo: {
+          Search: {
             screens: {
-              TabTwoScreen: 'two',
+              SearchScreen: 'search',
             },
           },
+          Library: {
+            screens: {
+              LibraryScreen: 'library',
+            },
+          },
+          Profile: {
+            screens: {
+              ProfileScreen: 'profile',
+            },
+          },
+
         },
       },
       Modal: 'modal',

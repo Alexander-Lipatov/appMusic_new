@@ -5,13 +5,22 @@ import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
 import Navigation from './navigation';
 
+import React from 'react';
+import * as NavigationBar from 'expo-navigation-bar';
+
 export default function App() {
+
+  // enables edge-to-edge mode
+  NavigationBar.setPositionAsync('absolute')
+  // transparent backgrounds to see through
+  NavigationBar.setBackgroundColorAsync('#ffffff00')
+
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
-
   if (!isLoadingComplete) {
     return null;
   } else {
+
     return (
       <SafeAreaProvider>
         <Navigation colorScheme={colorScheme} />
