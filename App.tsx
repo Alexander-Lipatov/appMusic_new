@@ -7,6 +7,9 @@ import Navigation from './navigation';
 
 import React from 'react';
 import * as NavigationBar from 'expo-navigation-bar';
+import PlayerWidget from './components/PlayerWidget';
+import axios from 'axios';
+import Constants from "expo-constants";
 
 export default function App() {
 
@@ -21,10 +24,14 @@ export default function App() {
     return null;
   } else {
 
+
+
+
     return (
       <SafeAreaProvider>
         <Navigation colorScheme={colorScheme} />
         <StatusBar />
+        <PlayerWidget />
       </SafeAreaProvider>
     );
   }

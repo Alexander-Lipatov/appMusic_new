@@ -3,7 +3,8 @@ import React, { useEffect } from 'react'
 import { useRoute } from '@react-navigation/native'
 
 import SongListItem from '../components/SongListItem'
-import album from '../data/albumDetaild'
+import AlbumHeader from '../components/AlbumHeader'
+import albumDetails from '../data/albumDetaild'
 
 
 
@@ -18,7 +19,15 @@ const AlbumScreen = () => {
 
   return (
     <View>
-      <FlatList data={album.song} renderItem={({ item }) => <SongListItem key={item.id} song={item} />} />
+      <FlatList
+        data={albumDetails.song}
+        renderItem={({ item }) => <SongListItem
+          key={item.id}
+          song={item}
+        />}
+        ListHeaderComponent={() => <AlbumHeader album={albumDetails} />}
+
+      />
 
     </View>
   )

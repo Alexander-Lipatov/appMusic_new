@@ -17,7 +17,9 @@ export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
   Modal: undefined;
   NotFound: undefined;
+  Home: undefined;
   AlbumScreen: undefined;
+  Album: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
@@ -43,6 +45,9 @@ export type Album = {
   id: string;
   imageUri: string;
   artistHeadline: string;
+  name: string;
+  by: string;
+  likes: string;
 }
 
 export type Song = {

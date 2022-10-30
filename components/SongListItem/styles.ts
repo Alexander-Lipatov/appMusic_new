@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         marginHorizontal: 15,
-        marginVertical: 10
+        margin: 10
     },
     image: {
         height: 75,
