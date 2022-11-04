@@ -43,10 +43,10 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> = Composit
 export type Album = {
 
   id: string;
-  imageUri: string;
-  artistHeadline: string;
   name: string;
   by: string;
+  imageUrl: string;
+  artist: string;
   likes: string;
 }
 
@@ -54,5 +54,6 @@ export type Song = {
   id: string,
   imageUrl: string,
   title: string,
-  artist: string
+  artist: string,
+  uri: string,
 }

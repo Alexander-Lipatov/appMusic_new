@@ -13,7 +13,7 @@ export default function AlbumHeader(props: AlbumHeaderProps) {
     const { album } = props
     return (
         <View style={styles.container}>
-            <Image source={{ uri: album.imageUri }} style={styles.image} />
+            <Image source={{ uri: album.imageUrl }} style={styles.image} />
             <Text style={styles.title}>{album.name}</Text>
             <View style={styles.creatorContainer}>
                 <Text style={styles.creator}> By {album.by}</Text>

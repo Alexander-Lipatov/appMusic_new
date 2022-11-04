@@ -137,7 +137,7 @@ function HomeNavigator() {
       <HomeStack.Screen
         name="AlbumScreen"
         component={AlbumScreen}
-        options={{ headerTitle: 'Album' }}
+        options={{ headerTitle: 'Home' }}
       />
 
 
